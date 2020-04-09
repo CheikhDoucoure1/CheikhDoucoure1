@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Main {
     final static int PARAM1=1;
     final static int PARAM2=2;
-    final static String TYPE1="Coffee";
-    final static String TYPE2="Bank";
-    final static String TYPE3="Retail";
-    final static String ROLE1="Gerant";
-    final static String ROLE2="Superviseur";
-    final static String ROLE3="Employé";
+    final static String TYPE1="COFFEE";
+    final static String TYPE2="BANK";
+    final static String TYPE3="RETAIL";
+    final static String ROLE1="GERANT";
+    final static String ROLE2="SUPERVISEUR";
+    final static String ROLE3="EMPLOYE";
 
     public static void role(){
         Scanner scanner = new Scanner(System.in);
@@ -49,14 +49,34 @@ public static void fait2() {
         System.out.print("Entrer son salaire par heures supplementaires: ");
         int salaireHeuresSup = scanner.nextInt();
         int salaireHeuresSup1 = salaireHeuresSup;
-        System.out.println("Salaire par heure :" + salaire1 + "\n"
+        System.out.println(type +"\n" + "Salaire par heure :" + salaire1 + "\n"
                 + "Nombre d'heures : " + nbrHeures1 + "\n" +
                 "Nombre d'heures supplementaires : " + nbrHeuresSup1 + "\n" +
                 "Salaire par heures supplementaires : " + salaireHeuresSup1);
+        int payroll= (salaire1 * nbrHeures1) + (salaireHeuresSup1* nbrHeuresSup1);
     }else {
         System.out.println("Erreur , recommencer.");
     }
     }
+    public static void payroll(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Entrer son salaire par heures: ");
+        int salaire = scanner.nextInt();
+        int salaire1 = salaire;
+        System.out.print("Entrer son nombre d'heures : ");
+        int nbrHeures = scanner.nextInt();
+        int nbrHeures1 = nbrHeures;
+        System.out.print("Entrer son nombre d'heures supplementaires : ");
+        int nbrHeuresSup = scanner.nextInt();
+        int nbrHeuresSup1 = nbrHeuresSup;
+        System.out.print("Entrer son salaire par heures supplementaires: ");
+        int salaireHeuresSup = scanner.nextInt();
+        int salaireHeuresSup1 = salaireHeuresSup;
+        int payroll= (salaire1 * nbrHeures1) + (salaireHeuresSup1* nbrHeuresSup1);
+        System.out.print("PAYROLL: " +  payroll + "\n");
+
+    }
+
 
 
 public static void  NomBusiness(){
@@ -80,7 +100,7 @@ public static void  NomBusiness(){
         }
 
         while(choix == 2 ){
-
+         payroll();
 
 
         }
